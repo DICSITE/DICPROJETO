@@ -1,0 +1,223 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+    background-image: url('floresta-amazonica-2.webp');
+    background-size: cover;
+    /* Redimensiona a imagem para cobrir todo o elemento */
+    background-repeat: no-repeat;
+    /* Evita a repetição da imagem */
+    overflow-y: scroll
+
+}
+
+.container {
+    background-color: #f3f5f8;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    height: 80px;
+    line-height: 80px;
+    z-index: 111;
+    background-color: #30503a;
+}
+
+.logo {
+    display: flex;
+    font-size: 40px;
+    font-weight: 800;
+    color: #f3f5f8;
+    letter-spacing: 3px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.navItems {
+    display: flex;
+}
+
+.navItems li {
+    list-style: none;
+    margin: 0 15px;
+}
+
+.navItems li a {
+    font-size: 25px;
+    color: #f3f5f8;
+    letter-spacing: 3px;
+    text-decoration: none;
+    text-transform: capitalize;
+
+}
+
+.navItems li:hover a {
+    color: #BBBB;
+}
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10%;
+    overflow: hidden;
+}
+
+.cols {
+    width: 50%;
+}
+
+.topline {
+    display: block;
+    position: relative;
+    font-size: 25px;
+    letter-spacing: 5px;
+    color: black;
+}
+
+h1 {
+    display: block;
+    font-size: 4em;
+    font-weight: 500;
+    color: #30503a;
+}
+
+p {
+    display: block;
+    width: 90%;
+    font-size: 1.2em;
+    color: black;
+}
+
+.btns {
+    width: 100%;
+    position: relative;
+    left: 150px;
+}
+
+button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+    color: #f3f5f8;
+    background-color: #30503a;
+    padding: 8px 14px;
+    margin: 24px 1px;
+    letter-spacing: 0.2px;
+    text-transform: capitalize;
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.4);
+}
+
+button:hover {
+    color: #BBBB;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+#search-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+#search-button {
+    background-color: #022b0e;
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    padding: 10px 20px;
+    cursor: pointer;
+    outline: none;
+}
+
+#search-button:hover {
+    background-color: #0056b3;
+}
+
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    /* Alinha horizontalmente no centro */
+    align-items: center;
+    /* Alinha verticalmente no centro */
+    height: 80vh;
+    /* Define a altura para ocupar a altura da janela */
+}
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+    width: 300px;
+    position: relative;
+}
+
+.carousel img {
+    width: 350px;
+    height: auto;
+}
+
+/* Botões de navegação */
+.prev,
+.next {
+    position: absolute;
+    top: 65%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    display: block;
+    margin: 2 auto;
+
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.meu-botao {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px;
+    font-size: 16px;
+    /* Tamanho da fonte */
+    border: none;
+    cursor: pointer;
+    /* Altera o cursor para a mão quando passa por cima */
+    display: block;
+    margin: 20px auto;
+}
+
+/* Estilo de hover (quando o mouse passa por cima do botão) */
+.meu-botao:hover {
+    background-color: #2980b9;
+    /* Cor de fundo alterada */
+}
