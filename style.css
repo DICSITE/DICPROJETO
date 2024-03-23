@@ -119,4 +119,33 @@ button {
 button:hover {
     color: #BBBB;
 }
-    
+
+@media screen and (max-width: 769px) {
+    .container {
+        display: block;
+    }
+
+    .cols {
+        width: 100%;
+    }
+
+    .wrapper {
+        width: 72%
+    }
+
+    .navItems {
+        width: 80%;
+        justify-content: center;
+        margin: auto;
+        text-align: left;
+    }
+
+    .btns {
+        width: 50%;
+        text-align: center;
+        left: 50px;
+    }
+    .logo{
+        width: 80%;
+    }
+}
