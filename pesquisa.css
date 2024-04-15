@@ -1,0 +1,145 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif; 
+}
+
+body {
+    overflow: hidden;
+}
+
+.container {
+    background-color: #ffff;
+    position: flex;
+    top: 0;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    height: 80px;
+    line-height: 80px;
+    z-index: 111;
+    background-color: #30503a;
+}
+
+.logo {
+    display: flex;
+    font-size: 40px;
+    font-weight: 800;
+    color: #f3f5f8;
+    letter-spacing: 3px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.navItems {
+    display: flex;
+}
+
+.navItems li {
+    list-style: none;
+    margin: 0 15px;
+}
+
+.navItems li a {
+    font-size: 25px;
+    color: #f3f5f8;
+    letter-spacing: 3px;
+    text-decoration: none;
+    text-transform: capitalize;
+
+}
+
+.navItems li:hover a {
+    color: #BBBB;
+}
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10%;
+    overflow: hidden;
+}
+
+.cols {
+    width: 50%;
+}
+
+.topline {
+    display: block;
+    position: relative;
+    font-size: 25px;
+    letter-spacing: 5px;
+    color: black;
+}
+
+h1 {
+    display: block;
+    font-size: 4em;
+    font-weight: 500;
+    color: #30503a;
+}
+
+p {
+    display: block;
+    width: 90%;
+    font-size: 1.2em;
+    color: black;
+}
+
+.btns {
+    width: 100%;
+    position: relative;
+    left: 120px;
+}
+
+button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+    color: #f3f5f8;
+    background-color: #30503a;
+    padding: 8px 14px;
+    margin: 24px 1px;
+    letter-spacing: 0.2px;
+    text-transform: capitalize;
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.4);
+}
+
+button:hover {
+    color: #BBBB;
+}
+.search-form {
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+
+}
+.search-form input[type="text"] {
+    width: 500px; /* Defina a largura desejada */
+    height: 60px; /* Defina a altura desejada */
+}
+
+
+.container {
+    min-height: 100%;
+    width: 100%;
+    position: relative;
+}
+.search-form button {
+    width: 80px; /* Defina a largura desejada */
+    height: 60px; /* Defina a altura desejada */
+    border-radius: 20px; /* Isso cria pontas arredondadas com um raio de 20px */
+}
