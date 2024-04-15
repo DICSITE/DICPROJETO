@@ -130,6 +130,7 @@ button:hover {
 .search-form input[type="text"] {
     width: 500px; /* Defina a largura desejada */
     height: 60px; /* Defina a altura desejada */
+    font-size: 18px; 
 }
 
 
