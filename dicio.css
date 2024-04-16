@@ -203,21 +203,3 @@ button:hover {
     right: 0;
 }
 
-.meu-botao {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    padding: 10px;
-    font-size: 16px;
-    /* Tamanho da fonte */
-    border: none;
-    cursor: pointer;
-    /* Altera o cursor para a mão quando passa por cima */
-    display: block;
-    margin: 20px auto;
-}
-
-/* Estilo de hover (quando o mouse passa por cima do botão) */
-.meu-botao:hover {
-    background-color: #2980b9;
-    /* Cor de fundo alterada */
-}

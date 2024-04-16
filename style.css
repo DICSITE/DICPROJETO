@@ -9,11 +9,12 @@
 
 body {
     overflow: hidden;
+    overflow-y: scroll
 }
 
 .container {
     background-color: #f3f5f8;
-    position: fixed;
+    position: flex;
     top: 0;
 }
 
@@ -74,11 +75,13 @@ nav {
 }
 
 .topline {
-    display: block;
-    position: relative;
+    display: flex;
+    position: relative; /* Corrigindo um erro de digitação: substituindo "flex" por "relative" */
     font-size: 25px;
     letter-spacing: 5px;
-    color: black;
+    color: #30503a;
+    margin-bottom: 60px; /* Adicionando espaço na parte inferior do elemento */
+    top: 60px;
 }
 
 h1 {
@@ -86,13 +89,17 @@ h1 {
     font-size: 4em;
     font-weight: 500;
     color: #30503a;
+    margin-bottom: 30px; /* Adicionando espaço na parte inferior do elemento */
+    top: 100px;
+
 }
 
 p {
     display: block;
     width: 90%;
-    font-size: 1.2em;
+    font-size: 1em;
     color: black;
+    margin-bottom: -25px;
 }
 
 .btns {
@@ -117,35 +124,6 @@ button {
 }
 
 button:hover {
-    color: #BBBB;
+    color: #ffff;
 }
-
-@media screen and (max-width: 769px) {
-    .container {
-        display: block;
-    }
-
-    .cols {
-        width: 100%;
-    }
-
-    .wrapper {
-        width: 72%
-    }
-
-    .navItems {
-        width: 80%;
-        justify-content: center;
-        margin: auto;
-        text-align: left;
-    }
-
-    .btns {
-        width: 50%;
-        text-align: center;
-        left: 50px;
-    }
-    .logo{
-        width: 80%;
-    }
-}
+    

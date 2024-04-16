@@ -47,7 +47,7 @@ nav{
 
 }
 .navItems li:hover a{
-    color: #BBBB;
+    color: #ffff;
 }
 .wrapper{
     display: flex;
