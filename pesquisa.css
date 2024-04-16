@@ -4,143 +4,154 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'poppins', sans-serif; 
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    overflow: hidden;
+    overflow-x: hidden; /* Removido overflow-y: scroll para evitar a barra de rolagem horizontal em dispositivos móveis */
 }
 
 .container {
-    background-color: #ffff;
-    position: flex;
-    top: 0;
+    background-color: #f3f5f8;
 }
 
 nav {
     display: flex;
-    width: 100%;
     justify-content: space-around;
+    align-items: center; /* Centraliza os itens verticalmente */
     height: 80px;
-    line-height: 80px;
-    z-index: 111;
     background-color: #30503a;
 }
 
 .logo {
-    display: flex;
-    font-size: 40px;
+    font-size: 20px; /* Aumentado o tamanho da fonte para o logo */
     font-weight: 800;
     color: #f3f5f8;
-    letter-spacing: 3px;
-    cursor: pointer;
+    letter-spacing: 2px;
     text-transform: uppercase;
+    margin-left: 100px; /* Movendo o logo para a direita */
 }
+
 
 .navItems {
     display: flex;
+
 }
 
 .navItems li {
     list-style: none;
-    margin: 0 15px;
+    margin: 0 20px; /* Reduzido o espaçamento entre os itens */
 }
 
 .navItems li a {
-    font-size: 25px;
+    font-size: 18px; /* Reduzido o tamanho da fonte para dispositivos móveis */
     color: #f3f5f8;
-    letter-spacing: 3px;
     text-decoration: none;
     text-transform: capitalize;
-
-}
-
-.navItems li:hover a {
-    color: #BBBB;
 }
 
 .wrapper {
     display: flex;
-    width: 100%;
+    flex-direction: column;
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
     height: 100vh;
-    justify-content: center;
-    align-items: center;
-    padding: 0 10%;
-    overflow: hidden;
-}
-
-.cols {
-    width: 50%;
+    padding: 50px 20px; /* Adicionado preenchimento com 50px no topo e 20px nos lados */
 }
 
 .topline {
-    display: block;
-    position: relative;
-    font-size: 25px;
-    letter-spacing: 5px;
-    color: black;
-}
-
-h1 {
-    display: block;
-    font-size: 4em;
-    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 3px;
     color: #30503a;
+    margin-bottom: 10px; /* Reduzido o espaçamento inferior */
+    text-align: center; /* Centralizado o texto */
 }
 
-p {
-    display: block;
-    width: 90%;
-    font-size: 1.2em;
-    color: black;
-}
 
 .btns {
+    display: flex;
+    justify-content: center; /* Centralizado os botões */
     width: 100%;
-    position: relative;
-    left: 120px;
 }
 
 button {
-    outline: none;
-    border: none;
-    cursor: pointer;
     font-size: 14px;
     font-weight: 400;
     color: #f3f5f8;
     background-color: #30503a;
     padding: 8px 14px;
-    margin: 24px 1px;
-    letter-spacing: 0.2px;
+    margin: 0 5px; /* Adicionado espaçamento entre os botões */
     text-transform: capitalize;
-    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.4);
+    border: none;
+    cursor: pointer;
 }
 
-button:hover {
-    color: #BBBB;
-}
+
+
 .search-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: absolute;
-    top: 200px;
-    left: 50%;
+    left: 47%;
     transform: translateX(-50%);
     z-index: 999;
-
+    top: 80%;
 }
+
 .search-form input[type="text"] {
-    width: 500px; /* Defina a largura desejada */
-    height: 60px; /* Defina a altura desejada */
-    font-size: 18px; 
+    width: 100%; /* Ambos os elementos ocupam 100% da largura disponível */
+    max-width: 500px;
+    height: 40px;
+    font-size: 18px;
+    margin-bottom: 10px;
+    top: 90%;
+    display: flex;
+    
+}
+.resultado{
+    position: absolute;
+    width: 100%; /* Ambos os elementos ocupam 100% da largura disponível */
+    max-width: 500px;
+    height: 60px;
+    font-size: 18px;
+    margin-bottom: 10px;
+    top: 50%;
+    display: flex;
 }
 
-
-.container {
-    min-height: 100%;
-    width: 100%;
-    position: relative;
-}
 .search-form button {
-    width: 80px; /* Defina a largura desejada */
-    height: 60px; /* Defina a altura desejada */
-    border-radius: 20px; /* Isso cria pontas arredondadas com um raio de 20px */
+    height: 60px;
+    font-size: 18px;
+    border-radius: 20px;
 }
+
+
+
+/* Adiciona regras de mídia para tornar o layout responsivo */
+@media only screen and (max-width: 768px) {
+    .navItems {
+        display: none; /* Oculta os itens do menu */
+    }
+
+    .logo {
+        font-size: 32px; /* Reduz o tamanho da fonte do logo */
+    }
+
+    .wrapper {
+        padding: 10px; /* Reduz o preenchimento */
+    }
+    .texto {
+        margin-top: 20px; /* Ajuste a distância do topo conforme necessário */
+        margin-left: 3%; /* Ajuste a distância da esquerda conforme necessário */
+        width: 90%; /* Ajuste a largura conforme necessário */
+    }
+}
+.texto {
+    margin-top: 500px; /* Ajuste a distância do topo conforme necessário */
+    margin-left: -1000px;
+    width: 90%;
+
+}
+
+

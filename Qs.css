@@ -4,12 +4,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    overflow: hidden;
-    overflow-y: scroll
+    overflow-x: hidden; /* Removido overflow-y: scroll para evitar a barra de rolagem horizontal em dispositivos móveis */
 }
 
 .container {
@@ -20,104 +19,107 @@ body {
 
 nav {
     display: flex;
-    width: 100%;
-    justify-content: space-around;
+    justify-content: space-between; /* Alterado para distribuir o espaço entre os itens */
+    align-items: center; /* Centraliza os itens verticalmente */
     height: 80px;
-    line-height: 80px;
-    z-index: 111;
     background-color: #30503a;
+    padding: 0 20px; /* Adicionado espaçamento interno */
 }
 
 .logo {
-    display: flex;
-    font-size: 40px;
+    font-size: 20px; /* Aumentado o tamanho da fonte para o logo */
     font-weight: 800;
     color: #f3f5f8;
-    letter-spacing: 3px;
-    cursor: pointer;
+    letter-spacing: 2px;
     text-transform: uppercase;
+    margin-right: 5px; /* Movendo o logo para a direita */
 }
-
 .navItems {
     display: flex;
+    flex: 1; /* Ocupa todo o espaço restante */
+    justify-content: flex-end; /* Alinha os itens à direita */
 }
 
 .navItems li {
     list-style: none;
-    margin: 0 15px;
+    margin: 0 10px; /* Reduzido o espaçamento entre os itens */
 }
 
 .navItems li a {
-    font-size: 25px;
+    font-size: 18px; /* Reduzido o tamanho da fonte para telas menores */
     color: #f3f5f8;
-    letter-spacing: 3px;
     text-decoration: none;
     text-transform: capitalize;
-
-}
-
-.navItems li:hover a {
-    color: #ffffff;
 }
 
 .wrapper {
     display: flex;
-    width: 100%;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    padding: 0 10%;
-    overflow: hidden;
-}
-
-.cols {
-    width: 50%;
+    flex-direction: column; /* Alterado para uma disposição em coluna */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    height: 100vh; /* Adicionado para ocupar toda a altura da tela */
+    padding: 0px 5px 5px; /* Adicionado preenchimento para espaçamento */
 }
 
 .topline {
-    display: block;
-    position: relative;
-    font-size: 25px;
-    letter-spacing: 5px;
+    font-size: 18px;
+    letter-spacing: 3px;
     color: black;
+    text-align: center;
+    margin-bottom: 20px; /* Adicionado espaçamento inferior */
 }
 
 h1 {
-    display: block;
-    font-size: 3em;
+    font-size: 2em;
     font-weight: 500;
     color: #30503a;
+    text-align: center;
+    margin-bottom: 20px; /* Adicionado espaçamento inferior */
 }
 
 p {
-    display: block;
-    width: 90%;
-    font-size: 1.2em;
+    font-size: 16px;
     color: black;
+    text-align: center;
+    margin-bottom: 20px; /* Adicionado espaçamento inferior */
+}
+
+
+p {
+    font-size: 16px; /* Reduzido o tamanho da fonte para telas menores */
+    color: black;
+    text-align: center; /* Centralizado o texto */
+    margin-bottom: 20px; /* Adicionado espaçamento inferior */
 }
 
 .btns {
+    display: flex;
+    justify-content: center; /* Centralizado os botões */
     width: 100%;
-    position: relative;
-    left: 150px;
 }
 
 button {
-    outline: none;
-    border: none;
-    cursor: pointer;
     font-size: 14px;
     font-weight: 400;
     color: #f3f5f8;
     background-color: #30503a;
     padding: 8px 14px;
-    margin: 24px 1px;
-    letter-spacing: 0.2px;
+    margin: 0 5px; /* Adicionado espaçamento entre os botões */
     text-transform: capitalize;
-    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.4);
+    border: none;
+    cursor: pointer;
 }
 
-button:hover {
-    color: #BBBB;
+@media only screen and (max-width: 600px) {
+    .logo {
+        font-size: 24px; /* Ajustes adicionais para telas menores */
+    }
+
+    .navItems {
+        display: none; /* Oculta os itens do menu */
+    }
+
+    .wrapper {
+        padding: 10px; /* Reduz o preenchimento */
+    }
 }
-    

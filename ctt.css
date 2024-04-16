@@ -1,106 +1,116 @@
 @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap);
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
-body{
-    overflow: hidden;
+
+body {
+    overflow-x: hidden;
 }
-.container{
+
+.container {
     width: 100%;
     min-height: 100vh;
     background-color: #f3f5f8;
 }
-nav{
+
+nav {
     display: flex;
-    width: 100%;
-    justify-content: space-around;
+    justify-content: space-between; /* Alterado para distribuir o espaço entre os itens */
+    align-items: center; /* Centraliza os itens verticalmente */
     height: 80px;
-    line-height: 80px;
-    z-index: 111;
     background-color: #30503a;
+    padding: 0 20px; /* Adicionado espaçamento interno */
 }
-.logo{
-    display: flex;
-    font-size: 40px;
+
+.logo {
+    font-size: 20px; /* Aumentado o tamanho da fonte para o logo */
     font-weight: 800;
     color: #f3f5f8;
-    letter-spacing: 3px;
-    cursor: pointer;
+    letter-spacing: 2px;
     text-transform: uppercase;
+    margin-right: 5px; /* Movendo o logo para a direita */
 }
-.navItems{
+.navItems {
     display: flex;
+    flex: 1; /* Ocupa todo o espaço restante */
+    justify-content: flex-end; /* Alinha os itens à direita */
 }
-.navItems li{
+
+.navItems li {
     list-style: none;
-    margin: 0 15px;
+    margin: 0 10px; /* Reduzido o espaçamento entre os itens */
 }
-.navItems li a{
-    font-size: 25px;
+
+.navItems li a {
+    font-size: 18px; /* Reduzido o tamanho da fonte para telas menores */
     color: #f3f5f8;
-    letter-spacing: 3px;
     text-decoration: none;
     text-transform: capitalize;
+}
 
-}
-.navItems li:hover a{
-    color: #ffff;
-}
-.wrapper{
+.wrapper {
     display: flex;
-    width: 100%;
-    height: 100vh;
+    flex-direction: column; /* Alterado para uma disposição em coluna para dispositivos móveis */
     justify-content: center;
     align-items: center;
-    padding: 0 10%;
-    overflow: hidden;
-}
-.cols{
-    width: 50%;
-}
-.topline{
-    display: block;
-    position: relative;
-    font-size: 25px;
-    letter-spacing: 5px;
-    color: black;
+    padding: 20px; /* Adicionado preenchimento para espaçamento */
 }
 
-h1{
-    display: block;
-    font-size: 4em;
+.topline {
+    font-size: 18px; /* Reduzido o tamanho da fonte para telas menores */
+    letter-spacing: 3px;
+    color: black;
+    margin-bottom: 20px; /* Adicionado espaçamento inferior */
+    text-align: center; /* Centralizado o texto */
+}
+
+h1 {
+    font-size: 2em; /* Reduzido o tamanho da fonte para telas menores */
     font-weight: 500;
     color: #30503a;
+    text-align: center; /* Centralizado o texto */
+    margin-bottom: 20px; /* Adicionado espaçamento inferior */
 }
-p{
-    display: block;
-    width: 90%;
-    font-size: 1.2em;
+
+p {
+    font-size: 16px; /* Reduzido o tamanho da fonte para telas menores */
     color: black;
+    text-align: center; /* Centralizado o texto */
+    margin-bottom: 20px; /* Adicionado espaçamento inferior */
 }
-.btns{
+
+.btns {
+    display: flex;
+    justify-content: center; /* Centralizado os botões */
     width: 100%;
-    position: relative;
-    left: 150px;
 }
-button{
-    outline: none;
-    border: none;
-    cursor: pointer;
+
+button {
     font-size: 14px;
     font-weight: 400;
     color: #f3f5f8;
     background-color: #30503a;
     padding: 8px 14px;
-    margin: 24px 1px ;
-    letter-spacing: 0.2px;
+    margin: 0 5px; /* Adicionado espaçamento entre os botões */
     text-transform: capitalize;
-    box-shadow: 0 15px 10px rgba(0, 0, 0,0.4);
-}
-button:hover{
-    color: #BBBB;
+    border: none;
+    cursor: pointer;
 }
 
+@media only screen and (max-width: 600px) {
+    .logo {
+        font-size: 24px; /* Ajustes adicionais para telas menores */
+    }
+
+    .navItems {
+        display: none; /* Oculta os itens do menu */
+    }
+
+    .wrapper {
+        padding: 10px; /* Reduz o preenchimento */
+    }
+}
