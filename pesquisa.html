@@ -32,13 +32,6 @@
                 <li><a href="contatos.html">Contatos</a> </li>
                 
             </ul>
-            <div class="texto">
-                <h1>Você já parou para pensar na riqueza e diversidade das línguas indígenas que compõem o nosso país? </h1>
-                <p>O Brasil abriga uma verdadeira tapeçaria linguística, refletindo a pluralidade cultural de suas origens. E é com o intuito de celebrar e preservar essa riqueza que apresentamos nosso dicionário.</p>
-                <p>Nosso dicionário busca por palavras em português e, quando possível, apresenta seus equivalentes em uma ou mais línguas indígenas. É uma maneira de reconhecer e valorizar a contribuição dessas línguas para a nossa história e identidade nacional.
-                    Entretanto, é importante ressaltar que nosso acervo ainda é pequeno. Estamos em constante busca por novas palavras e atualizações, trabalhando para expandir nosso repertório e oferecer um recurso mais abrangente e inclusivo.</p>
-                <p>Portanto, ao utilizar nosso dicionário, saiba que cada palavra catalogada representa um passo em direção à preservação e promoção das línguas indígenas do Brasil. E contamos com você para nos ajudar nessa jornada de descoberta e aprendizado contínuo. Juntos, podemos ampliar ainda mais as fronteiras do conhecimento linguístico e cultural do nosso país.</p>
-            </div>
             
             <!-- Formulário de busca -->
             <form class="search-form">
@@ -56,16 +49,16 @@
     </div>
 
     <script>
-        // Função para buscar a definição da palavra no dicionário
         function buscarDefinicao() {
-            // Obter a palavra digitada pelo usuário
-            var palavra = document.getElementById('searchInput').value.trim();
+    // Obter a palavra digitada pelo usuário e converter para minúsculas
+    var palavra = document.getElementById('searchInput').value.trim().toLowerCase();
 
-            // Verificar se a palavra está vazia
-            if (palavra === '') {
-                alert('Por favor, digite uma palavra para buscar.');
-                return;
-            }
+    // Verificar se a palavra está vazia
+    if (palavra === '') {
+        alert('Por favor, digite uma palavra para buscar.');
+        return;
+    }
+
 
             // Dicionário de palavras e definições (você pode substituir pelo seu dicionário)
             var dicionario = {
@@ -402,19 +395,16 @@
 
 
             };
-
-            // Verificar se a palavra está no dicionário
-            if (palavra in dicionario) {
-                // Exibir a definição da palavra na caixa de texto
-
-                document.getElementById('resultadoBusca').value = dicionario[palavra];
-                document.getElementById('resultadoBusca').style.fontSize = '20px'; // Defina o tamanho da fonte desejado aqui, por exemplo, 16px.
-
-            } else {
-                // Se a palavra não foi encontrada, exibir uma mensagem de erro
-                document.getElementById('resultadoBusca').value = 'Ops! Parece que esta palavra ainda não foi catalogada.';
-            }
-        }
+ // Verificar se a palavra está no dicionário
+ if (palavra in dicionario) {
+        // Exibir a definição da palavra na caixa de texto
+        document.getElementById('resultadoBusca').value = dicionario[palavra];
+        document.getElementById('resultadoBusca').style.fontSize = '20px'; // Defina o tamanho da fonte desejado aqui, por exemplo, 16px.
+    } else {
+        // Se a palavra não foi encontrada, exibir uma mensagem de erro
+        document.getElementById('resultadoBusca').value = 'Ops! Parece que esta palavra ainda não foi catalogada.';
+    }
+}
     </script>
 
 </body>

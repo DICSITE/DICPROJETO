@@ -9,6 +9,7 @@
 
 body {
     overflow-x: hidden; /* Removido overflow-y: scroll para evitar a barra de rolagem horizontal em dispositivos móveis */
+    overflow-y: auto; 
 }
 
 .container {
@@ -96,7 +97,7 @@ button {
     left: 47%;
     transform: translateX(-50%);
     z-index: 999;
-    top: 80%;
+    top: 30%;
 }
 
 .search-form input[type="text"] {
@@ -105,7 +106,7 @@ button {
     height: 40px;
     font-size: 18px;
     margin-bottom: 10px;
-    top: 90%;
+    top: 30%;
     display: flex;
     
 }
@@ -113,10 +114,10 @@ button {
     position: absolute;
     width: 100%; /* Ambos os elementos ocupam 100% da largura disponível */
     max-width: 500px;
-    height: 60px;
+    height: 80px;
     font-size: 18px;
     margin-bottom: 10px;
-    top: 50%;
+    top: 10%;
     display: flex;
 }
 
@@ -128,30 +129,24 @@ button {
 
 
 
+
+
 /* Adiciona regras de mídia para tornar o layout responsivo */
-@media only screen and (max-width: 768px) {
-    .navItems {
-        display: none; /* Oculta os itens do menu */
-    }
+@media only screen and (min-width: 768px) and (max-widht: 1024px) {
 
     .logo {
-        font-size: 32px; /* Reduz o tamanho da fonte do logo */
+        font-size: 30px; /* Reduz o tamanho da fonte do logo */
     }
 
     .wrapper {
         padding: 10px; /* Reduz o preenchimento */
     }
     .texto {
-        margin-top: 20px; /* Ajuste a distância do topo conforme necessário */
-        margin-left: 3%; /* Ajuste a distância da esquerda conforme necessário */
-        width: 90%; /* Ajuste a largura conforme necessário */
+        margin-top: 10px; /* Ajuste a distância do topo conforme necessário */
+        margin-left: 5%; /* Ajuste a distância da esquerda conforme necessário */
+        width: 10%; /* Ajuste a largura conforme necessário */
     }
 }
-.texto {
-    margin-top: 500px; /* Ajuste a distância do topo conforme necessário */
-    margin-left: -1000px;
-    width: 90%;
 
-}
 
 

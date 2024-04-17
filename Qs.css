@@ -123,3 +123,24 @@ button {
         padding: 10px; /* Reduz o preenchimento */
     }
 }
+.imagem-esquerda {
+    position: absolute;
+    left: -50px; /* Ajuste a posição da imagem à esquerda conforme necessário */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px; /* Defina o tamanho da imagem */
+    height: 40px; /* Defina o tamanho da imagem */
+    background-image: url('Captura\ de\ tela\ 2024-04-16\ 205656.png'); /* Substitua pelo caminho da sua imagem */
+    background-size: cover;
+}
+
+.imagem-direita {
+    position: absolute;
+    right: -50px; /* Ajuste a posição da imagem à direita conforme necessário */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px; /* Defina o tamanho da imagem */
+    height: 40px; /* Defina o tamanho da imagem */
+    background-image: url('Captura\ de\ tela\ 2024-04-16\ 205827.png'); /* Substitua pelo caminho da sua imagem */
+    background-size: cover;
+}
