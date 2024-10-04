@@ -1,5 +1,12 @@
 @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap);
 
+:root {
+    --primary-color: #30503a;
+    --secondary-color: #f3f5f8;
+    --hover-color: #243a27;
+    --text-color: black;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,114 +14,158 @@
     font-family: 'Poppins', sans-serif;
 }
 
+html, body {
+    height: 100%; /* Garantindo que html e body ocupem 100% da altura */
+}
+
 body {
-    overflow-x: hidden; /* Removido overflow-y: scroll para evitar a barra de rolagem horizontal em dispositivos móveis */
+    overflow-x: hidden; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh; 
+    background-color: var(--secondary-color);
 }
 
 .container {
-    background-color: #f3f5f8;
+    width: 100%;
+    background-color: #ffffff; 
+    padding: 20px;
+    border-radius: 8px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    margin: 0; /* Espaço acima e abaixo */
+    flex: 1; /* Faz o container ocupar o espaço restante */
+    padding-top: 80px; /* Espaçamento igual à altura do nav */
 }
-
-nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center; /* Centraliza os itens verticalmente */
-    height: 80px;
-    background-color: #30503a;
-}
-
 .logo {
     font-size: 20px; /* Aumentado o tamanho da fonte para o logo */
     font-weight: 800;
     color: #f3f5f8;
     letter-spacing: 2px;
     text-transform: uppercase;
-    margin-right: 5px; /* Movendo o logo para a direita */
+    margin-left: 100px; /* Movendo o logo para a direita */
+}
+
+nav {
+    display: flex; /* Mudado para flex para alinhamento dos itens */
+    justify-content: flex-end; /* Alinha os itens do nav à direita */
+    align-items: center; /* Centraliza verticalmente */
+    height: 80px; /* Mantenha essa altura ou ajuste conforme necessário */
+    background-color: var(--primary-color); 
+    margin: 0; /* Remover a margem inferior */
+    border-radius: 0; /* Remover bordas arredondadas para ocupar a parte superior */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    position: fixed; /* Faz com que o nav fique fixo no topo */
+    top: 0; /* Coloca o nav no topo da página */
+    left: 0; /* Garante que comece do lado esquerdo */
+    right: 0; /* Garante que vá até o lado direito */
+    z-index: 1000; /* Garante que fique acima de outros elementos */
 }
 
 
+.logo {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--primary-color);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
 .navItems {
     display: flex;
+    gap: 20px; /* Adicionado espaço entre itens */
 }
 
 .navItems li {
     list-style: none;
-    margin: 0 10px; /* Reduzido o espaçamento entre os itens */
 }
 
 .navItems li a {
-    font-size: 18px; /* Reduzido o tamanho da fonte para dispositivos móveis */
-    color: #f3f5f8;
+    font-size: 18px;
+    color: #ffffff;
     text-decoration: none;
     text-transform: capitalize;
 }
 
 .wrapper {
     display: flex;
-    flex-direction: column; /* Alterado para uma disposição em coluna para empilhar os elementos */
+    flex-direction: column;
     align-items: center;
-    padding: 20px; /* Adicionado preenchimento para espaçamento nos dispositivos móveis */
+    text-align: center;
+    padding-top: 80px; /* Espaçamento igual à altura do nav */
 }
 
 .topline {
-    font-size: 18px; /* Reduzido o tamanho da fonte para dispositivos móveis */
-    letter-spacing: 3px;
-    color: #30503a;
-    margin-bottom: 30px;
-    text-align: center; /* Centralizado o texto */
+    display: block; /* Faz com que o span se comporte como um bloco */
+    margin: 20px 0; /* Adiciona espaço acima e abaixo */
+    font-size: 24px; /* Exemplo de tamanho de fonte */
+    color: var(--primary-color); /* Cor definida nas variáveis */
+    text-align: center; /* Centraliza o texto, se desejado */
 }
-
 h1 {
-    font-size: 2.5em; /* Reduzido o tamanho da fonte para dispositivos móveis */
+    font-size: 2.5em;
     font-weight: 500;
-    color: #30503a;
+    color: var(--primary-color);
     margin-bottom: 20px;
-    text-align: center; /* Centralizado o texto */
 }
 
 p {
-    font-size: 16px; /* Reduzido o tamanho da fonte para dispositivos móveis */
-    color: black;
+    font-size: 16px;
+    color: var(--text-color);
     margin-bottom: 20px;
-    text-align: center; /* Centralizado o texto */
 }
 
 .btns {
     display: flex;
-    justify-content: center; /* Centralizado os botões */
-    width: 100%;
+    justify-content: center;
+    gap: 10px; /* Espaço entre botões */
 }
 
 button {
     font-size: 14px;
     font-weight: 400;
-    color: #f3f5f8;
-    background-color: #30503a;
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
     padding: 8px 14px;
-    margin: 0 5px; /* Adicionado espaçamento entre os botões */
-    text-transform: capitalize;
     border: none;
     cursor: pointer;
+    border-radius: 4px; /* Adicionado bordas arredondadas */
+}
+
+button:hover {
+    background-color: var(--hover-color);
+}
+
+.image-container {
+    text-align: center;
+    margin-top: 20px; 
+    width: 100%; 
+}
+
+.image-container img {
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 8px; /* Bordas arredondadas para imagens */
 }
 
 @media only screen and (max-width: 600px) {
     .logo {
-        font-size: 20px; /* Ajustes adicionais para telas menores */
+        font-size: 18px;
     }
 
     .navItems li a {
-        font-size: 16px; /* Ajustes adicionais para telas menores */
+        font-size: 16px;
     }
 
     .topline {
-        font-size: 16px; /* Ajustes adicionais para telas menores */
+        font-size: 16px;
     }
 
     h1 {
-        font-size: 2em; /* Ajustes adicionais para telas menores */
+        font-size: 2em;
     }
 
     p {
-        font-size: 14px; /* Ajustes adicionais para telas menores */
+        font-size: 14px;
     }
 }
