@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap);
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap');
 
 * {
     margin: 0;
@@ -8,123 +8,74 @@
 }
 
 body {
-    overflow-x: hidden; /* Removido overflow-y: scroll para evitar a barra de rolagem horizontal em dispositivos móveis */
+    overflow-x: hidden;
     overflow-y: auto; 
 }
 
 .container {
     background-color: #f3f5f8;
+    padding: 20px;
+}
+
+.logo {
+    font-size: 24px; /* Increased logo font size */
+    font-weight: 800;
+    color: #30503a; /* Changed to a contrasting color */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px; /* Added margin for spacing */
 }
 
 nav {
     display: flex;
-    justify-content: space-around;
-    align-items: center; /* Centraliza os itens verticalmente */
+    justify-content: space-between;
+    align-items: center;
     height: 80px;
     background-color: #30503a;
 }
 
-.logo {
-    font-size: 20px; /* Aumentado o tamanho da fonte para o logo */
-    font-weight: 800;
-    color: #f3f5f8;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-left: 100px; /* Movendo o logo para a direita */
-}
-
-
 .navItems {
     display: flex;
-
 }
 
 .navItems li {
     list-style: none;
-    margin: 0 20px; /* Reduzido o espaçamento entre os itens */
+    margin: 0 15px; /* Reduced margin for better spacing */
 }
 
 .navItems li a {
-    font-size: 18px; /* Reduzido o tamanho da fonte para dispositivos móveis */
+    font-size: 18px;
     color: #f3f5f8;
     text-decoration: none;
     text-transform: capitalize;
 }
 
-.wrapper {
+.search-form {
     display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centraliza verticalmente */
-    align-items: center; /* Centraliza horizontalmente */
-    height: 100vh;
-    padding: 50px 20px; /* Adicionado preenchimento com 50px no topo e 20px nos lados */
 }
 
-.topline {
-    font-size: 18px;
-    letter-spacing: 3px;
+.search-form input {
+    padding: 10px;
+    font-size: 16px;
+}
+
+.search-form button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #f3f5f8;
     color: #30503a;
-    margin-bottom: 10px; /* Reduzido o espaçamento inferior */
-    text-align: center; /* Centralizado o texto */
-}
-
-
-.btns {
-    display: flex;
-    justify-content: center; /* Centralizado os botões */
-    width: 100%;
-}
-
-button {
-    font-size: 14px;
-    font-weight: 400;
-    color: #f3f5f8;
-    background-color: #30503a;
-    padding: 8px 14px;
-    margin: 0 5px; /* Adicionado espaçamento entre os botões */
-    text-transform: capitalize;
     border: none;
     cursor: pointer;
 }
 
-
-
-.search-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    left: 47%;
-    transform: translateX(-50%);
-    z-index: 999;
-    top: 30%;
+.resultado {
+    margin-top: 20px; /* Spacing above results */
 }
 
-.search-form input[type="text"] {
-    width: 100%; /* Ambos os elementos ocupam 100% da largura disponível */
-    max-width: 500px;
-    height: 40px;
-    font-size: 18px;
-    margin-bottom: 10px;
-    top: 30%;
-    display: flex;
-    
-}
-.resultado{
-    position: absolute;
-    width: 100%; /* Ambos os elementos ocupam 100% da largura disponível */
-    max-width: 500px;
-    height: 80px;
-    font-size: 18px;
-    margin-bottom: 10px;
-    top: 10%;
-    display: flex;
-}
-
-.search-form button {
-    height: 60px;
-    font-size: 18px;
-    border-radius: 20px;
+textarea {
+    width: 100%;
+    font-size: 16px; /* Adjusted font size */
+    padding: 10px;
 }
 
 
@@ -145,6 +96,10 @@ button {
         margin-top: 10px; /* Ajuste a distância do topo conforme necessário */
         margin-left: 5%; /* Ajuste a distância da esquerda conforme necessário */
         width: 10%; /* Ajuste a largura conforme necessário */
+    }
+    .container{
+        padding: 50px;
+
     }
 }
 
